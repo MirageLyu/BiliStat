@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+<style>
+    body{
+        background-color: #fb7299;
+    }
+</style>
+
+{% block navbar %}
+<li><a href="basic">基本信息</a></li>
+<li><a href="fansfluct">涨粉掉粉榜单</a></li>
+<li><a href="activedata">用户活跃趋势</a></li>
+<li class="active"><a>分区热度</a></li>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div id="graph" style="width: 960px;height:600px;margin: 0 auto;"></div>
+</div>
+
+{% endblock %}
+
+{% block script %}
+<script language =javascript>
+    var myChart = echarts.init(document.getElementById('graph'));
+
+    var option = {
+        title: {
+            text: '各分区视频数量比例图',
+            left: 'center',
+            top: 20,
+            textStyle: {
+                color: '#00a0d8'
+            }
+        },
+
+        tooltip: {
+            trigger: 'item',
+            formatter: '{a} <br/>{b} : {c} ({d}%)'
+        },
+
+        visualMap: {
+            show: false,
+            min: 80,
+            max: 600,
+            inRange: {
+                colorLightness: [0, 1]
+            }
+        },
+        series: [
+            {
+                name: '访问来源',
+                type: 'pie',
+                radius: '55%',
+                center: ['50%', '50%'],
+                data: [
+                    {value: 2998851, name: '动画'},
+                    {value: 630526, name: '国创相关'},
+                    {value: 1291700, name: '音乐'},
+                    {value: 1631558, name: '舞蹈'},
+                    {value: 1824332, name: '游戏'},
+                    {value: 2255391, name: '科技'},
+                    {value: 927462, name: '数码'},
+                    {value: 3112080, name: '生活'},
+                    {value: 3467175, name: '鬼畜'},
+                    {value: 801023, name: '时尚'},
+                    {value: 1678697, name: '娱乐'},
+                    {value: 1571511, name: '影视'}
+                ].sort(function (a, b) { return a.value - b.value; }),
+                roseType: 'radius',
+                label: {
+                    color: 'rgba(0, 0, 0, 0.3)'
+                },
+                labelLine: {
+                    lineStyle: {
+                        color: 'rgba(0, 0, 0, 0.3)'
+                    },
+                    smooth: 0.2,
+                    length: 10,
+                    length2: 20
+                },
+                itemStyle: {
+                    color: '#c23531',
+                    shadowBlur: 200,
+                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                },
+
+                animationType: 'scale',
+                animationEasing: 'elasticOut',
+                animationDelay: function (idx) {
+                    return Math.random() * 200;
+                }
+            }
+        ]
+    };
+    myChart.setOption(option);
+</script>
+{% endblock %}
