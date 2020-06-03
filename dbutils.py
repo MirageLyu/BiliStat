@@ -21,18 +21,18 @@ def initDB():
 
 def gettop2up(conn):
     c = conn.cursor()
-    result = c.execute("SELECT NAME, FANS, FACE FROM USER ORDER BY FANS DESC;")
+    result = c.execute("SELECT NAME, FANS, FACE, MID FROM USER ORDER BY FANS DESC;")
     r = []
     for row in result:
-        r.append((row[0], row[1], row[2]))
+        r.append((row[0], row[1], row[2], row[3]))
     return r
 
 def gettop10up(conn):
     c = conn.cursor()
-    result = c.execute("SELECT NAME, FANS, FACE, SIGN FROM USER ORDER BY FANS DESC;")
+    result = c.execute("SELECT NAME, FANS, FACE, SIGN, MID FROM USER ORDER BY FANS DESC;")
     r = []
     for row in result:
-        r.append([row[0], row[1], row[2], row[3]])
+        r.append([row[0], row[1], row[2], row[3], row[4]])
     return r
 
 def getdayrank10(conn):
