@@ -18,16 +18,38 @@ def login():
     login_form = LoginForm()
 
     if request.method == 'POST':
-        phone = request.form.get('phone')
-        password = request.form.get('password')
-        print(phone, password)
-        return redirect('basic')
+        phone = request.form.get('phone', type=str)
+        password = request.form.get('password', type=str)
+        conn = sqlite3.connect("bilistat.db")
+        c = conn.cursor()
+        result = c.execute("SELECT PASSWORD FROM ACCOUNTS WHERE USERNAME='"+str(phone)+"';")
+        pasw = ""
+        for row in result:
+            pasw = row[0]
+        if pasw == password:
+            return redirect('basic')
     return render_template('login.html', form=login_form)
 
 
 @app.route('/register', methods=['GET', 'POST'])
 def Register():
     register_form = RegisterForm()
+    if request.method == 'POST':
+        phone = request.form.get('phone', type=str)
+        password = request.form.get('password', type=str)
+        conn = sqlite3.connect("bilistat.db")
+        c = conn.cursor()
+        result = c.execute("SELECT PASSWORD FROM ACCOUNTS WHERE USERNAME='"+str(phone)+"';")
+        conn.commit()
+        pasw = ""
+        for row in result:
+            pasw = row[0]
+        if pasw != "":
+            return redirect('register.html')
+        else:
+            c.execute("INSERT INTO ACCOUNTS (USERNAME, PASSWORD) VALUES (?,?);", (phone, password))
+            conn.commit()
+            return redirect('login')
     return render_template('register.html', form=register_form)
 
 
