@@ -37,7 +37,7 @@ def gettop10up(conn):
 
 def getdayrank10(conn):
     c = conn.cursor()
-    result = c.execute("SELECT AUTHOR, PLAY, PIC, TITLE FROM DAYRANK LIMIT 10;")
+    result = c.execute("SELECT AUTHOR, PLAY, PIC, TITLE, BVID FROM DAYRANK LIMIT 10;")
     r = []
     for row in result:
         r.append(row)
@@ -45,7 +45,7 @@ def getdayrank10(conn):
 
 def getmonthrank10(conn):
     c = conn.cursor()
-    result = c.execute("SELECT AUTHOR, PLAY, PIC, TITLE FROM MONTHRANK LIMIT 10;")
+    result = c.execute("SELECT AUTHOR, PLAY, PIC, TITLE, BVID FROM MONTHRANK LIMIT 10;")
     r = []
     for row in result:
         r.append(row)

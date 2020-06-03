@@ -2,7 +2,6 @@
 {% extends "base.html" %}
 {% block navbar %}
 <li class="active"><a>基本信息</a></li>
-<li><a href="fansfluct">涨粉掉粉榜单</a></li>
 <li><a href="activedata">用户活跃趋势</a></li>
 <li><a href="category">分区热度</a></li>
 {% endblock %}
@@ -18,14 +17,14 @@
         </div>
         <div class="col-xs-4">
             <div class="vs_box" style="display: flex; align-items: center; margin: 0 auto; width: 210px">
-                <div class="avatar" style="height: 60px; min-width: 60px; width: 60px;">
+                <div class="avatar">
                     <img src="{{top1_face}}">
                 </div>
                 <div class="text_block">
                     <div style="color: gray; font-weight: bold; font-size: 1.5rem; text-align: center;">榜首粉丝争夺</div>
                     <div style="color: red; font-weight: bold; font-size: 3.5rem; text-align: center;">vs</div>
                 </div>
-                <div class="avatar" style="height: 60px; min-width: 60px; width: 60px;">
+                <div class="avatar">
                 <img src="{{top2_face}}">
             </div>
             </div>
@@ -51,7 +50,7 @@
             <div class="card__text">
               <span>
                   <a href="https://space.bilibili.com/{{top10[0][4]}}" class="card_label" style="display: flex; text-decoration: none; color: rgba(0, 0, 0, 0.87); transform-origin: center top 0px;">
-                      <div class="avatar" style="height: 60px; min-width: 60px; width: 60px;">
+                      <div class="avatar">
                           <img src="{{top10[0][2]}}">
                       </div>
                       <div class="col">
@@ -99,7 +98,7 @@
                     </div>
                 </a>
                 <a href="https://space.bilibili.com/{{top10[2][4]}}" class="card_label" style="display: flex; text-decoration: none; color: rgba(0, 0, 0, 0.87); transform-origin: center top 0px;">
-                    <div class="avatar" style="height: 60px; min-width: 60px; width: 60px;">
+                    <div class="avatar">
                         <img src="{{top10[2][2]}}">
                     </div>
                     <div class="col">
@@ -123,7 +122,7 @@
                     </div>
                 </a>
                 <a href="https://space.bilibili.com/{{top10[3][4]}}" class="card_label" style="display: flex; text-decoration: none; color: rgba(0, 0, 0, 0.87); transform-origin: center top 0px;">
-                    <div class="avatar" style="height: 60px; min-width: 60px; width: 60px;">
+                    <div class="avatar">
                         <img src="{{top10[3][2]}}">
                     </div>
                     <div class="col">
@@ -147,7 +146,7 @@
                     </div>
                 </a>
                 <a href="https://space.bilibili.com/{{top10[4][4]}}" class="card_label" style="display: flex; text-decoration: none; color: rgba(0, 0, 0, 0.87); transform-origin: center top 0px;">
-                    <div class="avatar" style="height: 60px; min-width: 60px; width: 60px;">
+                    <div class="avatar">
                         <img src="{{top10[4][2]}}">
                     </div>
                     <div class="col">
@@ -171,7 +170,7 @@
                     </div>
                 </a>
                 <a href="https://space.bilibili.com/{{top10[5][4]}}" class="card_label" style="display: flex; text-decoration: none; color: rgba(0, 0, 0, 0.87); transform-origin: center top 0px;">
-                    <div class="avatar" style="height: 60px; min-width: 60px; width: 60px;">
+                    <div class="avatar">
                         <img src="{{top10[5][2]}}">
                     </div>
                     <div class="col">
@@ -195,7 +194,7 @@
                     </div>
                 </a>
                 <a href="https://space.bilibili.com/{{top10[6][4]}}" class="card_label" style="display: flex; text-decoration: none; color: rgba(0, 0, 0, 0.87); transform-origin: center top 0px;">
-                    <div class="avatar" style="height: 60px; min-width: 60px; width: 60px;">
+                    <div class="avatar">
                         <img src="{{top10[6][2]}}">
                     </div>
                     <div class="col">
@@ -219,7 +218,7 @@
                     </div>
                 </a>
                 <a href="https://space.bilibili.com/{{top10[7][4]}}" class="card_label" style="display: flex; text-decoration: none; color: rgba(0, 0, 0, 0.87); transform-origin: center top 0px;">
-                    <div class="avatar" style="height: 60px; min-width: 60px; width: 60px;">
+                    <div class="avatar">
                         <img src="{{top10[7][2]}}">
                     </div>
                     <div class="col">
@@ -243,7 +242,7 @@
                     </div>
                 </a>
                 <a href="https://space.bilibili.com/{{top10[8][4]}}" class="card_label" style="display: flex; text-decoration: none; color: rgba(0, 0, 0, 0.87); transform-origin: center top 0px;">
-                    <div class="avatar" style="height: 60px; min-width: 60px; width: 60px;">
+                    <div class="avatar">
                         <img src="{{top10[8][2]}}">
                     </div>
                     <div class="col">
@@ -267,7 +266,7 @@
                     </div>
                 </a>
                   <a href="https://space.bilibili.com/{{top10[9][4]}}" class="card_label" style="display: flex; text-decoration: none; color: rgba(0, 0, 0, 0.87); transform-origin: center top 0px;">
-                      <div class="avatar" style="height: 60px; min-width: 60px; width: 60px;">
+                      <div class="avatar">
                           <img src="{{top10[9][2]}}">
                       </div>
                       <div class="col">
@@ -303,8 +302,8 @@
           </div>
           <div class="card__text">
             <span>
-                <a href="/author/50329118" class="card_label" style="display: flex; text-decoration: none; color: rgba(0, 0, 0, 0.87); transform-origin: center top 0px;">
-                    <div class="avatar" style="height: 60px; min-width: 60px; width: 60px;">
+                <a href="https://www.bilibili.com/video/{{dayrank[0][4]}}" class="card_label" style="display: flex; text-decoration: none; color: rgba(0, 0, 0, 0.87); transform-origin: center top 0px;">
+                    <div class="video_avatar">
                         <img src="{{dayrank[0][2]}}">
                     </div>
                     <div class="col">
@@ -327,8 +326,8 @@
                         </span>
                     </div>
                 </a>
-                <a href="/author/50329118" class="card_label" style="display: flex; text-decoration: none; color: rgba(0, 0, 0, 0.87); transform-origin: center top 0px;">
-                  <div class="avatar" style="height: 60px; min-width: 60px; width: 60px;">
+                <a href="https://www.bilibili.com/video/{{dayrank[1][4]}}" class="card_label" style="display: flex; text-decoration: none; color: rgba(0, 0, 0, 0.87); transform-origin: center top 0px;">
+                  <div class="video_avatar">
                       <img src="{{dayrank[1][2]}}">
                   </div>
                   <div class="col">
@@ -351,8 +350,8 @@
                       </span>
                   </div>
               </a>
-              <a href="/author/50329118" class="card_label" style="display: flex; text-decoration: none; color: rgba(0, 0, 0, 0.87); transform-origin: center top 0px;">
-                  <div class="avatar" style="height: 60px; min-width: 60px; width: 60px;">
+              <a href="https://www.bilibili.com/video/{{dayrank[2][4]}}" class="card_label" style="display: flex; text-decoration: none; color: rgba(0, 0, 0, 0.87); transform-origin: center top 0px;">
+                  <div class="video_avatar" >
                       <img src="{{dayrank[2][2]}}">
                   </div>
                   <div class="col">
@@ -375,8 +374,8 @@
                       </span>
                   </div>
               </a>
-              <a href="/author/50329118" class="card_label" style="display: flex; text-decoration: none; color: rgba(0, 0, 0, 0.87); transform-origin: center top 0px;">
-                  <div class="avatar" style="height: 60px; min-width: 60px; width: 60px;">
+              <a href="https://www.bilibili.com/video/{{dayrank[3][4]}}" class="card_label" style="display: flex; text-decoration: none; color: rgba(0, 0, 0, 0.87); transform-origin: center top 0px;">
+                  <div class="video_avatar">
                       <img src="{{dayrank[3][2]}}">
                   </div>
                   <div class="col">
@@ -399,8 +398,8 @@
                       </span>
                   </div>
               </a>
-              <a href="/author/50329118" class="card_label" style="display: flex; text-decoration: none; color: rgba(0, 0, 0, 0.87); transform-origin: center top 0px;">
-                  <div class="avatar" style="height: 60px; min-width: 60px; width: 60px;">
+              <a href="https://www.bilibili.com/video/{{dayrank[4][4]}}" class="card_label" style="display: flex; text-decoration: none; color: rgba(0, 0, 0, 0.87); transform-origin: center top 0px;">
+                  <div class="video_avatar">
                       <img src="{{dayrank[4][2]}}">
                   </div>
                   <div class="col">
@@ -423,8 +422,8 @@
                       </span>
                   </div>
               </a>
-              <a href="/author/50329118" class="card_label" style="display: flex; text-decoration: none; color: rgba(0, 0, 0, 0.87); transform-origin: center top 0px;">
-                  <div class="avatar" style="height: 60px; min-width: 60px; width: 60px;">
+              <a href="https://www.bilibili.com/video/{{dayrank[5][4]}}" class="card_label" style="display: flex; text-decoration: none; color: rgba(0, 0, 0, 0.87); transform-origin: center top 0px;">
+                  <div class="video_avatar">
                       <img src="{{dayrank[5][2]}}">
                   </div>
                   <div class="col">
@@ -447,8 +446,8 @@
                       </span>
                   </div>
               </a>
-              <a href="/author/50329118" class="card_label" style="display: flex; text-decoration: none; color: rgba(0, 0, 0, 0.87); transform-origin: center top 0px;">
-                  <div class="avatar" style="height: 60px; min-width: 60px; width: 60px;">
+              <a href="https://www.bilibili.com/video/{{dayrank[6][4]}}" class="card_label" style="display: flex; text-decoration: none; color: rgba(0, 0, 0, 0.87); transform-origin: center top 0px;">
+                  <div class="video_avatar">
                       <img src="{{dayrank[6][2]}}">
                   </div>
                   <div class="col">
@@ -471,8 +470,8 @@
                       </span>
                   </div>
               </a>
-              <a href="/author/50329118" class="card_label" style="display: flex; text-decoration: none; color: rgba(0, 0, 0, 0.87); transform-origin: center top 0px;">
-                  <div class="avatar" style="height: 60px; min-width: 60px; width: 60px;">
+              <a href="https://www.bilibili.com/video/{{dayrank[7][4]}}" class="card_label" style="display: flex; text-decoration: none; color: rgba(0, 0, 0, 0.87); transform-origin: center top 0px;">
+                  <div class="video_avatar">
                       <img src="{{dayrank[7][2]}}">
                   </div>
                   <div class="col">
@@ -495,8 +494,8 @@
                       </span>
                   </div>
               </a>
-              <a href="/author/50329118" class="card_label" style="display: flex; text-decoration: none; color: rgba(0, 0, 0, 0.87); transform-origin: center top 0px;">
-                  <div class="avatar" style="height: 60px; min-width: 60px; width: 60px;">
+              <a href="https://www.bilibili.com/video/{{dayrank[8][4]}}" class="card_label" style="display: flex; text-decoration: none; color: rgba(0, 0, 0, 0.87); transform-origin: center top 0px;">
+                  <div class="video_avatar">
                       <img src="{{dayrank[8][2]}}">
                   </div>
                   <div class="col">
@@ -519,8 +518,8 @@
                       </span>
                   </div>
               </a>
-                <a href="/author/50329118" class="card_label" style="display: flex; text-decoration: none; color: rgba(0, 0, 0, 0.87); transform-origin: center top 0px;">
-                    <div class="avatar" style="height: 60px; min-width: 60px; width: 60px;">
+                <a href="https://www.bilibili.com/video/{{dayrank[9][4]}}" class="card_label" style="display: flex; text-decoration: none; color: rgba(0, 0, 0, 0.87); transform-origin: center top 0px;">
+                    <div class="video_avatar">
                         <img src="{{dayrank[9][2]}}">
                     </div>
                     <div class="col">
@@ -556,8 +555,8 @@
         </div>
         <div class="card__text">
             <span>
-                <a href="/author/50329118" class="card_label" style="display: flex; text-decoration: none; color: rgba(0, 0, 0, 0.87); transform-origin: center top 0px;">
-                    <div class="avatar" style="height: 60px; min-width: 60px; width: 60px;">
+                <a href="https://www.bilibili.com/video/{{monthrank[0][4]}}" class="card_label" style="display: flex; text-decoration: none; color: rgba(0, 0, 0, 0.87); transform-origin: center top 0px;">
+                    <div class="video_avatar">
                         <img src="{{monthrank[0][2]}}">
                     </div>
                     <div class="col">
@@ -580,8 +579,8 @@
                         </span>
                     </div>
                 </a>
-                <a href="/author/50329118" class="card_label" style="display: flex; text-decoration: none; color: rgba(0, 0, 0, 0.87); transform-origin: center top 0px;">
-                  <div class="avatar" style="height: 60px; min-width: 60px; width: 60px;">
+                <a href="https://www.bilibili.com/video/{{monthrank[1][4]}}" class="card_label" style="display: flex; text-decoration: none; color: rgba(0, 0, 0, 0.87); transform-origin: center top 0px;">
+                  <div class="video_avatar">
                       <img src="{{monthrank[1][2]}}">
                   </div>
                   <div class="col">
@@ -604,8 +603,8 @@
                       </span>
                   </div>
               </a>
-              <a href="/author/50329118" class="card_label" style="display: flex; text-decoration: none; color: rgba(0, 0, 0, 0.87); transform-origin: center top 0px;">
-                  <div class="avatar" style="height: 60px; min-width: 60px; width: 60px;">
+              <a href="https://www.bilibili.com/video/{{monthrank[2][4]}}" class="card_label" style="display: flex; text-decoration: none; color: rgba(0, 0, 0, 0.87); transform-origin: center top 0px;">
+                  <div class="video_avatar">
                       <img src="{{monthrank[2][2]}}">
                   </div>
                   <div class="col">
@@ -628,8 +627,8 @@
                       </span>
                   </div>
               </a>
-              <a href="/author/50329118" class="card_label" style="display: flex; text-decoration: none; color: rgba(0, 0, 0, 0.87); transform-origin: center top 0px;">
-                  <div class="avatar" style="height: 60px; min-width: 60px; width: 60px;">
+              <a href="https://www.bilibili.com/video/{{monthrank[3][4]}}" class="card_label" style="display: flex; text-decoration: none; color: rgba(0, 0, 0, 0.87); transform-origin: center top 0px;">
+                  <div class="video_avatar">
                       <img src="{{monthrank[3][2]}}">
                   </div>
                   <div class="col">
@@ -652,8 +651,8 @@
                       </span>
                   </div>
               </a>
-              <a href="/author/50329118" class="card_label" style="display: flex; text-decoration: none; color: rgba(0, 0, 0, 0.87); transform-origin: center top 0px;">
-                  <div class="avatar" style="height: 60px; min-width: 60px; width: 60px;">
+              <a href="https://www.bilibili.com/video/{{monthrank[4][4]}}" class="card_label" style="display: flex; text-decoration: none; color: rgba(0, 0, 0, 0.87); transform-origin: center top 0px;">
+                  <div class="video_avatar">
                       <img src="{{monthrank[4][2]}}">
                   </div>
                   <div class="col">
@@ -676,8 +675,8 @@
                       </span>
                   </div>
               </a>
-              <a href="/author/50329118" class="card_label" style="display: flex; text-decoration: none; color: rgba(0, 0, 0, 0.87); transform-origin: center top 0px;">
-                  <div class="avatar" style="height: 60px; min-width: 60px; width: 60px;">
+              <a href="https://www.bilibili.com/video/{{monthrank[5][4]}}" class="card_label" style="display: flex; text-decoration: none; color: rgba(0, 0, 0, 0.87); transform-origin: center top 0px;">
+                  <div class="video_avatar">
                       <img src="{{monthrank[5][2]}}">
                   </div>
                   <div class="col">
@@ -700,8 +699,8 @@
                       </span>
                   </div>
               </a>
-              <a href="/author/50329118" class="card_label" style="display: flex; text-decoration: none; color: rgba(0, 0, 0, 0.87); transform-origin: center top 0px;">
-                  <div class="avatar" style="height: 60px; min-width: 60px; width: 60px;">
+              <a href="https://www.bilibili.com/video/{{monthrank[6][4]}}" class="card_label" style="display: flex; text-decoration: none; color: rgba(0, 0, 0, 0.87); transform-origin: center top 0px;">
+                  <div class="video_avatar">
                       <img src="{{monthrank[6][2]}}">
                   </div>
                   <div class="col">
@@ -724,8 +723,8 @@
                       </span>
                   </div>
               </a>
-              <a href="/author/50329118" class="card_label" style="display: flex; text-decoration: none; color: rgba(0, 0, 0, 0.87); transform-origin: center top 0px;">
-                  <div class="avatar" style="height: 60px; min-width: 60px; width: 60px;">
+              <a href="https://www.bilibili.com/video/{{monthrank[7][4]}}" class="card_label" style="display: flex; text-decoration: none; color: rgba(0, 0, 0, 0.87); transform-origin: center top 0px;">
+                  <div class="video_avatar">
                       <img src="{{monthrank[7][2]}}">
                   </div>
                   <div class="col">
@@ -748,8 +747,8 @@
                       </span>
                   </div>
               </a>
-              <a href="/author/50329118" class="card_label" style="display: flex; text-decoration: none; color: rgba(0, 0, 0, 0.87); transform-origin: center top 0px;">
-                  <div class="avatar" style="height: 60px; min-width: 60px; width: 60px;">
+              <a href="https://www.bilibili.com/video/{{monthrank[8][4]}}" class="card_label" style="display: flex; text-decoration: none; color: rgba(0, 0, 0, 0.87); transform-origin: center top 0px;">
+                  <div class="video_avatar">
                       <img src="{{monthrank[8][2]}}">
                   </div>
                   <div class="col">
@@ -772,8 +771,8 @@
                       </span>
                   </div>
               </a>
-                <a href="/author/50329118" class="card_label" style="display: flex; text-decoration: none; color: rgba(0, 0, 0, 0.87); transform-origin: center top 0px;">
-                    <div class="avatar" style="height: 60px; min-width: 60px; width: 60px;">
+                <a href="https://www.bilibili.com/video/{{monthrank[9][4]}}" class="card_label" style="display: flex; text-decoration: none; color: rgba(0, 0, 0, 0.87); transform-origin: center top 0px;">
+                    <div class="video_avatar">
                         <img src="{{monthrank[9][2]}}">
                     </div>
                     <div class="col">
